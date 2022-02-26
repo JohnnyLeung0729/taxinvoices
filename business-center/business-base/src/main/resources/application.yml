@@ -1,0 +1,64 @@
+customer:
+  caseNumber: _ZX
+  #?????
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    druid:
+      validationQuery: SELECT 1
+      initialSize: 10
+      minIdle: 10
+      maxActive: 200
+      minEvictableIdleTimeMillis: 180000
+      testOnBorrow: false
+      testWhileIdle: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 1800
+      logAbandoned: true
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 100
+spring:
+  application:
+    name: business-base
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: m_tm
+    password: oracle
+    url: jdbc:oracle:thin:@122.9.52.224:5910:orcl
+  redis:
+    database: 0
+    host: 122.9.52.224
+    port: 26379
+    timeout: 6000ms
+    password: wms123
+    jedis:
+      pool:
+        max-active: 102
+        max-idle: 8
+        max-wait: 100
+        min-idle: 2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka
+mybatis-plus:
+  mapper-locations: classpath*:/mappers/**/*.xml
+  type-aliases-package: com.szmsd.businessbase.entity
+  configuration:
+    log-impl:  org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      db-type: oracle
+      id-type: auto
+
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+
+
+
+  #?????????????
+  #?????????????
+file:
+  uploadFolder: /home/www/wms_maishi/upload
+  url: http://116.63.161.239/
