@@ -1,0 +1,9 @@
+server.port: 8380
+
+spring:
+    profiles:
+      active: dev
+
+user.userName: 梁晔
+user.sex: 男
+user.age: 18

@@ -1,0 +1,18 @@
+server.port: 8380
+
+
+user.userName: JohnnyLeung
+user.sex: 男
+user.age: 18
+
+#开发环境数据库信息
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_learn?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: Ly818379   #数据库名、用户名和密码改为自己的
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    com.tonechen.tonechentaxinvoice.dao: debug
