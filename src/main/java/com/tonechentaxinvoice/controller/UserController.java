@@ -2,6 +2,7 @@ package com.tonechentaxinvoice.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.tonechentaxinvoice.Entity.UserEntity;
+import com.tonechentaxinvoice.dao.UserMapper;
 import com.tonechentaxinvoice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -46,5 +48,10 @@ public class UserController {
         queryWrapper.eq(UserEntity::getAge,age);
 
         return userService.list(queryWrapper);
+    }
+
+    @GetMapping("/getuser-by-id")
+    public UserEntity getUserById(@RequestParam(name="userid") Integer userid){
+        return userService.getUserById(userid);
     }
 }

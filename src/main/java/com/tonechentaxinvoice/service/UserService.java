@@ -9,4 +9,6 @@ public interface UserService extends IService<UserEntity> {
     List<UserEntity> getUsers();
 
     List<UserEntity> getUsersBySex(String sex);
+
+    UserEntity getUserById(Integer userId);
 }

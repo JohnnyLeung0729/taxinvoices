@@ -7,10 +7,15 @@ import com.tonechentaxinvoice.dao.UserMapper;
 import com.tonechentaxinvoice.service.UserService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper,UserEntity> implements UserService {
+
+    @Resource
+    private UserMapper userMapper;
+
     @Override
     public List<UserEntity> getUsers() {
         return this.list();
@@ -23,4 +28,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,UserEntity> implemen
         List<UserEntity> list=this.list(wrapper);
         return list;
     }
+
+    @Override
+    public UserEntity getUserById(Integer userId) {
+        return userMapper.getUserById(userId);
+    }
+
 }

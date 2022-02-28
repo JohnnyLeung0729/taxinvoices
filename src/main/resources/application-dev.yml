@@ -15,4 +15,14 @@ spring:
 
 logging:
   level:
-    com.tonechen.tonechentaxinvoice.dao: debug
+    com.tonechentaxinvoice.dao: debug
+
+mybatis-plus:
+  mapper-locations: classpath*:mappers/*.xml
+  type-aliases-package: com.tonechentaxinvoice.dao
+  configuration:
+    log-impl:  org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      db-type: mysql
+      id-type: auto
