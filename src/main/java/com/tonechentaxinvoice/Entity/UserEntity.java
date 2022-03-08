@@ -1,4 +1,4 @@
-package com.tonechentaxinvoice.Entity;
+package com.tonechentaxinvoice.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -8,58 +8,69 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("user")
 public class UserEntity {
 
-    @TableId(value="id",type= IdType.AUTO)
-    private Integer id;
+    @TableId(value="id",type= IdType.UUID)
+    private String id;
 
-    @TableField(value="name")
-    private String name;
+    @TableField(value="uname")
+    private String uname;
 
-    @TableField(value="age")
-    private Integer age;
+    @TableField(value="pwd")
+    private String pwd;
 
-    @TableField(value="sex")
-    private String sex;
+    @TableField(value="nname")
+    private String nname;
 
-    @TableField(value="address")
-    private String address;
+    @TableField(value="posts")
+    private String posts;
 
-    public Integer getAge() {
-        return age;
-    }
+    @TableField(value="memo")
+    private String memo;
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
+    public String getUname() {
+        return uname;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+    public String getNname() {
+        return nname;
+    }
+
+    public void setNname(String nname) {
+        this.nname = nname;
+    }
+
+    public String getPosts() {
+        return posts;
+    }
+
+    public void setPosts(String posts) {
+        this.posts = posts;
+    }
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
 }
