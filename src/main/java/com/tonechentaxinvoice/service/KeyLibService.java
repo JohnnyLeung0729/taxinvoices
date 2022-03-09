@@ -1,6 +1,6 @@
 package com.tonechentaxinvoice.service;
 
-import com.tonechentaxinvoice.entity.User;
+import com.tonechentaxinvoice.entity.KeyLib;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author JohnnyLeung
  * @since 2022-03-09
  */
-public interface UserService extends IService<User> {
+public interface KeyLibService extends IService<KeyLib> {
 
 }

@@ -15,4 +15,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ClientuserMapper extends BaseMapper<Clientuser> {
 
+    int addClientuser(Clientuser clientuser);
+
 }

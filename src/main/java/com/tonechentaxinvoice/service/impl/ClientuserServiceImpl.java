@@ -4,6 +4,7 @@ import com.tonechentaxinvoice.entity.Clientuser;
 import com.tonechentaxinvoice.mapper.ClientuserMapper;
 import com.tonechentaxinvoice.service.ClientuserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -20,11 +21,16 @@ import java.util.List;
 @Service
 public class ClientuserServiceImpl extends ServiceImpl<ClientuserMapper, Clientuser> implements ClientuserService {
 
-//    @Resource
-//    private Clientuser clientuserMapper;
+    @Autowired
+    private ClientuserMapper clientuserMapper;
 
     @Override
     public List<Clientuser> getClientUsers() {
         return this.list();
+    }
+
+    @Override
+    public int saveClientuser(Clientuser clientuser) {
+        return clientuserMapper.addClientuser(clientuser);
     }
 }

@@ -1,6 +1,6 @@
 package com.tonechentaxinvoice.mapper;
 
-import com.tonechentaxinvoice.entity.User;
+import com.tonechentaxinvoice.entity.KeyLib;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author JohnnyLeung
  * @since 2022-03-09
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface KeyLibMapper extends BaseMapper<KeyLib> {
 
 }

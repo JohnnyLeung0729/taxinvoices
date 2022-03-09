@@ -17,4 +17,6 @@ public interface ClientuserService extends IService<Clientuser> {
 
     //    获取所有电票客户清单
     List<Clientuser> getClientUsers();
+
+    int saveClientuser(Clientuser clientuser);
 }

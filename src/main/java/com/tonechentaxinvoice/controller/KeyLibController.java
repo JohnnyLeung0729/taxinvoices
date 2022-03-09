@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2022-03-09
  */
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/key-lib")
+public class KeyLibController {
 
 }
 

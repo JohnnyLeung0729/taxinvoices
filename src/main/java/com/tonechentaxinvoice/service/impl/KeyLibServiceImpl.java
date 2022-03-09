@@ -1,8 +1,8 @@
 package com.tonechentaxinvoice.service.impl;
 
-import com.tonechentaxinvoice.entity.User;
-import com.tonechentaxinvoice.mapper.UserMapper;
-import com.tonechentaxinvoice.service.UserService;
+import com.tonechentaxinvoice.entity.KeyLib;
+import com.tonechentaxinvoice.mapper.KeyLibMapper;
+import com.tonechentaxinvoice.service.KeyLibService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-03-09
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+public class KeyLibServiceImpl extends ServiceImpl<KeyLibMapper, KeyLib> implements KeyLibService {
 
 }
